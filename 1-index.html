@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeos SUH · Memoria de Supervisión y Calculadora EPADI</title>
+<meta name="description" content="Vídeos del Servicio de Urgencias del Hospital de Antequera: Memoria de Supervisión de Enfermería 2026 y Calculadora EPADI.">
+<meta property="og:title" content="Vídeos SUH · Urgencias Hospital de Antequera">
+<meta property="og:description" content="Memoria de Supervisión de Enfermería 2026 y Calculadora EPADI, con enlace al portal de supervisión.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="poster-memoria.jpg">
+<link rel="icon" href="logo-suh.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1522; --panel:#10243b; --panel-2:#0d1b2b; --line:#24364a;
+    --ink:#e8eef5; --ink-2:#8ea1b4; --accent:#6ea8d8; --warn:#e0a13e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:16px;line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 20px 56px}
+  header{display:flex;align-items:center;gap:14px;padding:12px 0 24px;border-bottom:1px solid var(--line)}
+  header img{width:52px;height:52px;border-radius:50%;background:#fff}
+  header .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+  h1{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:30px;line-height:1.2;margin:28px 0 8px}
+  .intro{color:var(--ink-2);max-width:60ch;margin-bottom:32px}
+  section{margin-bottom:40px}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:22px;margin-bottom:6px}
+  .sub{color:var(--ink-2);font-size:14px;margin-bottom:14px}
+  video{display:block;width:100%;border-radius:14px;border:1px solid var(--line);background:#000}
+  .note{margin-top:10px;font-size:13px;color:var(--warn)}
+  .portal{display:flex;align-items:center;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;color:var(--ink);margin-top:8px}
+  .portal:hover{border-color:var(--accent)}
+  .portal .txt b{display:block;font-weight:600}
+  .portal .txt span{color:var(--ink-2);font-size:14px}
+  .portal .arrow{margin-left:auto;color:var(--accent);font-size:20px}
+  footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-2);font-size:13px}
+  @media (min-width:720px){ h1{font-size:38px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="logo-suh.jpg" alt="Logotipo SUH">
+    <div>
+      <div class="kicker">Servicio de Urgencias · Hospital de Antequera</div>
+      <div class="kicker">Área Sanitaria Norte de Málaga</div>
+    </div>
+  </header>
+
+  <h1>Vídeos del SUH</h1>
+  <p class="intro">Memoria de Supervisión de Enfermería 2026 y Calculadora EPADI, en vídeo de 30 segundos. Al final tienes el enlace al portal de supervisión.</p>
+
+  <section>
+    <h2>Memoria de Supervisión de Enfermería 2026</h2>
+    <p class="sub">Proyecto de gestión: personas, procesos, seguridad y calidad.</p>
+    <video controls preload="metadata" poster="poster-memoria.jpg" src="memoria-supervision-suh-2026.mp4"></video>
+  </section>
+
+  <section>
+    <h2>Calculadora EPADI</h2>
+    <p class="sub">Índice de fragilidad en el paciente mayor.</p>
+    <video controls preload="metadata" poster="poster-epadi.jpg" src="calculadora-epadi.mp4"></video>
+    <p class="note">Herramienta de apoyo no oficial: no sustituye el juicio clínico ni el registro en la historia del paciente.</p>
+  </section>
+
+  <section>
+    <h2>Portal de supervisión</h2>
+    <a class="portal" href="https://medinavergaramaria03-blip.github.io/portal-suh-antequera/index.html#inicio">
+      <span class="txt"><b>Mi web de supervisión</b><span>Memoria, presentación del proyecto y herramientas digitales del SUH.</span></span>
+      <span class="arrow">&#8594;</span>
+    </a>
+  </section>
+
+  <footer>Servicio de Urgencias · Hospital de Antequera</footer>
+</div>
+</body>
+</html>

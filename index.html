@@ -37,6 +37,10 @@
   .portal .txt span{color:var(--ink-2);font-size:14px}
   .portal .arrow{margin-left:auto;color:var(--accent);font-size:20px}
   footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-2);font-size:13px}
+  .hero{position:relative;margin:20px 0 4px}
+  .hero video{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .sound-btn{position:absolute;right:12px;bottom:12px;background:rgba(10,21,34,.78);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-family:inherit;font-size:13px;cursor:pointer}
+  .sound-btn:hover{border-color:var(--accent)}
   @media (min-width:720px){ h1{font-size:38px} }
 </style>
 </head>
@@ -49,6 +53,11 @@
       <div class="kicker">Área Sanitaria Norte de Málaga</div>
     </div>
   </header>
+
+  <div class="hero">
+    <video id="videoCabecera" autoplay muted loop playsinline preload="metadata" poster="3-14-poster-zoom.jpg" src="2-14-zoom-google-earth-suh.mp4"></video>
+    <button id="botonSonido" class="sound-btn" type="button" aria-label="Activar sonido">Activar sonido</button>
+  </div>
 
   <h1>Vídeos del SUH</h1>
   <p class="intro">Memoria de Supervisión de Enfermería 2026, Calculadora EPADI, Recomendaciones al alta, Triaje y asignación de pacientes y los códigos Dolor torácico, Ictus, Trauma y Sepsis, en vídeos de 30 segundos. Al final tienes el enlace al portal de supervisión.</p>
@@ -118,5 +127,15 @@
 
   <footer>Servicio de Urgencias · Hospital de Antequera</footer>
 </div>
+<script>
+  var v = document.getElementById('videoCabecera');
+  var b = document.getElementById('botonSonido');
+  b.addEventListener('click', function () {
+    v.muted = !v.muted;
+    if (!v.muted) { v.play(); }
+    b.textContent = v.muted ? 'Activar sonido' : 'Silenciar';
+    b.setAttribute('aria-label', b.textContent);
+  });
+</script>
 </body>
 </html>

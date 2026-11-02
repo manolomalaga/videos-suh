@@ -22,8 +22,15 @@
   body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:16px;line-height:1.55}
   .wrap{max-width:880px;margin:0 auto;padding:24px 20px 56px}
   header{display:flex;align-items:center;gap:14px;padding:12px 0 24px;border-bottom:1px solid var(--line)}
-  header img{width:52px;height:52px;border-radius:50%;background:#fff}
+  header>img{width:52px;height:52px;border-radius:50%;background:#fff}
   header .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+  .logos{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .logos img{background:#fff;border-radius:10px;padding:5px 8px;object-fit:contain}
+  .logos img.l-suh{height:44px;width:auto}
+  .logos img.l-norte{height:34px;width:auto}
+  .logos img.l-junta{height:44px;width:auto}
+  footer .logos{margin:0 0 12px}
+  @media (max-width:560px){ header>.logos{margin-left:0} header{flex-wrap:wrap} .logos img.l-norte{height:26px} .logos img.l-junta{height:36px} footer .logos img.l-norte{height:30px} }
   h1{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:30px;line-height:1.2;margin:28px 0 8px}
   .intro{color:var(--ink-2);max-width:60ch;margin-bottom:32px}
   section{margin-bottom:40px}
@@ -52,6 +59,10 @@
     <div>
       <div class="kicker">Servicio de Urgencias · Hospital de Antequera</div>
       <div class="kicker">Área Sanitaria Norte de Málaga</div>
+    </div>
+    <div class="logos">
+      <img class="l-norte" src="1-logo-saludnorte-malaga.jpg" alt="Área Sanitaria Norte de Málaga - SaludNorteMálaga">
+      <img class="l-junta" src="2-logo-junta-andalucia.jpg" alt="Junta de Andalucía - Consejería de Sanidad, Presidencia y Emergencias">
     </div>
   </header>
 
@@ -165,7 +176,14 @@
     <p class="note">Herramienta de consulta y formación: no sustituye el juicio clínico.</p>
   </section>
 
-  <footer>Servicio de Urgencias · Hospital de Antequera</footer>
+  <footer>
+    <div class="logos">
+      <img class="l-suh" src="2-logo-suh.jpg" alt="Logotipo SUH">
+      <img class="l-norte" src="1-logo-saludnorte-malaga.jpg" alt="Área Sanitaria Norte de Málaga - SaludNorteMálaga">
+      <img class="l-junta" src="2-logo-junta-andalucia.jpg" alt="Junta de Andalucía - Consejería de Sanidad, Presidencia y Emergencias">
+    </div>
+    Servicio de Urgencias · Hospital de Antequera
+  </footer>
 </div>
 <script>
   function cablearSonido(idVideo, idBoton) {

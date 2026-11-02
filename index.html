@@ -41,6 +41,7 @@
   .hero video{width:100%;aspect-ratio:16/9;object-fit:cover}
   .sound-btn{position:absolute;right:12px;bottom:12px;background:rgba(10,21,34,.78);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-family:inherit;font-size:13px;cursor:pointer}
   .sound-btn:hover{border-color:var(--accent)}
+  .sound-btn.top-right{top:12px;bottom:auto}
   @media (min-width:720px){ h1{font-size:38px} }
 </style>
 </head>
@@ -61,7 +62,7 @@
 
   <div class="hero">
     <video id="videoRecorrido" autoplay muted loop playsinline preload="metadata" poster="2-poster-recorrido.jpg" src="1-recorrido-areas-suh-60s.mp4"></video>
-    <button id="botonSonidoRecorrido" class="sound-btn" type="button" aria-label="Activar sonido">Activar sonido</button>
+    <button id="botonSonidoRecorrido" class="sound-btn top-right" type="button" aria-label="Activar sonido">Activar sonido</button>
   </div>
 
   <h1>Vídeos del SUH</h1>

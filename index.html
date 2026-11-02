@@ -59,6 +59,11 @@
     <button id="botonSonido" class="sound-btn" type="button" aria-label="Activar sonido">Activar sonido</button>
   </div>
 
+  <div class="hero">
+    <video id="videoRecorrido" autoplay muted loop playsinline preload="metadata" poster="2-poster-recorrido.jpg" src="1-recorrido-areas-suh-60s.mp4"></video>
+    <button id="botonSonidoRecorrido" class="sound-btn" type="button" aria-label="Activar sonido">Activar sonido</button>
+  </div>
+
   <h1>Vídeos del SUH</h1>
   <p class="intro">Memoria de Supervisión de Enfermería 2026, Calculadora EPADI, Recomendaciones al alta, Triaje y asignación de pacientes y los códigos Dolor torácico, Ictus, Trauma y Sepsis, en vídeos de 30 segundos. Al final tienes el enlace al portal de supervisión.</p>
 
@@ -128,14 +133,18 @@
   <footer>Servicio de Urgencias · Hospital de Antequera</footer>
 </div>
 <script>
-  var v = document.getElementById('videoCabecera');
-  var b = document.getElementById('botonSonido');
-  b.addEventListener('click', function () {
-    v.muted = !v.muted;
-    if (!v.muted) { v.play(); }
-    b.textContent = v.muted ? 'Activar sonido' : 'Silenciar';
-    b.setAttribute('aria-label', b.textContent);
-  });
+  function cablearSonido(idVideo, idBoton) {
+    var v = document.getElementById(idVideo);
+    var b = document.getElementById(idBoton);
+    b.addEventListener('click', function () {
+      v.muted = !v.muted;
+      if (!v.muted) { v.play(); }
+      b.textContent = v.muted ? 'Activar sonido' : 'Silenciar';
+      b.setAttribute('aria-label', b.textContent);
+    });
+  }
+  cablearSonido('videoCabecera', 'botonSonido');
+  cablearSonido('videoRecorrido', 'botonSonidoRecorrido');
 </script>
 </body>
 </html>

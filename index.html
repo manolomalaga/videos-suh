@@ -50,9 +50,10 @@
   .sound-btn:hover{border-color:var(--accent)}
   .sound-btn.top-right{top:12px;bottom:auto}
   @media (min-width:720px){ h1{font-size:38px} }
-  .logos video.l-anim{height:110px;width:auto;border-radius:12px;border:1px solid var(--line);background:transparent;object-fit:cover}
+  .logos .l-anim-wrap{height:100px;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#fff;line-height:0}
+  .logos video.l-anim{display:block;height:168px;width:auto;margin-top:-26px;border:none;background:transparent;object-fit:cover}
   video.mini{width:100%;max-width:200px;margin:0 auto}
-  @media (max-width:560px){ .logos video.l-anim{height:78px} }
+  @media (max-width:560px){ .logos .l-anim-wrap{height:64px} .logos video.l-anim{height:108px;margin-top:-17px} }
 </style>
 </head>
 <body>
@@ -66,7 +67,7 @@
     <div class="logos">
       <img class="l-norte" src="1-logo-saludnorte-malaga.jpg" alt="Área Sanitaria Norte de Málaga - SaludNorteMálaga">
       <img class="l-junta" src="2-logo-junta-andalucia.jpg" alt="Junta de Andalucía - Consejería de Sanidad, Presidencia y Emergencias">
-      <video class="l-anim" autoplay muted loop playsinline preload="metadata" src="7-logos-suh-asnm-animacion.mp4" title="Animación de los logotipos SUH y SaludNorteMálaga" aria-label="Animación de los logotipos del SUH y del Área Sanitaria Norte de Málaga"></video>
+      <div class="l-anim-wrap"><video class="l-anim" autoplay muted loop playsinline preload="metadata" src="7-logos-suh-asnm-animacion.mp4" title="Animación de los logotipos SUH y SaludNorteMálaga" aria-label="Animación de los logotipos del SUH y del Área Sanitaria Norte de Málaga"></video></div>
     </div>
   </header>
 
